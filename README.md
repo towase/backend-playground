@@ -16,7 +16,7 @@ backend-playground/
 
 ## Experiments
 
-- [並び替えAPI](experiments/reorder-api/README.md)
+- [並び替え](experiments/reorder/README.md)
 
 ## 共通コマンド
 

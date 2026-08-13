@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/towase/backend-playground/experiments/reorder-api/internal/item"
+	"github.com/towase/backend-playground/experiments/reorder/full-reindex/internal/item"
 )
 
 type server struct {

@@ -1,4 +1,4 @@
-# 並び替えAPI
+# 全件再採番による並び替えAPI
 
 `id` で指定した要素を、`previousId` で指定した要素の直後へ移動するAPIです。
 
@@ -22,14 +22,14 @@ Content-Type: application/json
 リポジトリのルートで実行します。
 
 ```sh
-go test ./experiments/reorder-api/...
-go run ./experiments/reorder-api
+go test ./experiments/reorder/full-reindex/...
+go run ./experiments/reorder/full-reindex
 ```
 
 データはリポジトリ直下の `reorder.db` に保存されるため、サーバーを再起動しても並び順が残ります。保存先は環境変数で変更できます。
 
 ```sh
-DATABASE_PATH=/tmp/reorder.db PORT=18080 go run ./experiments/reorder-api
+DATABASE_PATH=/tmp/reorder.db PORT=18080 go run ./experiments/reorder/full-reindex
 ```
 
 `PORT` を省略した場合は `8080` を使います。
