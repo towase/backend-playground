@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestStoreReorder(t *testing.T) {
+func TestMemoryStoreReorder(t *testing.T) {
 	tests := []struct {
 		name       string
 		id         string
@@ -61,7 +61,7 @@ func TestStoreReorder(t *testing.T) {
 	}
 }
 
-func TestStoreReorderValidation(t *testing.T) {
+func TestMemoryStoreReorderValidation(t *testing.T) {
 	tests := []struct {
 		name       string
 		id         string
@@ -103,8 +103,8 @@ func TestStoreReorderValidation(t *testing.T) {
 	}
 }
 
-func newTestStore() *Store {
-	return NewStore([]Item{
+func newTestStore() *MemoryStore {
+	return NewMemoryStore([]Item{
 		{ID: "A", Name: "alpha", Position: 1},
 		{ID: "B", Name: "bravo", Position: 2},
 		{ID: "C", Name: "charlie", Position: 3},
